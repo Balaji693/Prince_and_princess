@@ -57,7 +57,7 @@ public class Playermovement : MonoBehaviour
     void Movement()
     {
         Movedir = new Vector3(leftjoystick.Horizontal * 1f, 0, leftjoystick.Vertical * 1f);
-     //   var vel = Quaternion.AngleAxis(cameraangleY + 180, Vector3.up) * Movedir * 5f;
+     var vel = Quaternion.AngleAxis(cameraangleY + 180, Vector3.up) * Movedir * 5f;
 
 
         if (leftjoystick.Vertical != 0f)

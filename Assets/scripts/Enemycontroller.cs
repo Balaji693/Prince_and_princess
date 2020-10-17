@@ -23,14 +23,14 @@ public class Enemycontroller : MonoBehaviour
     void FixedUpdate()
     {
         Playerdistance = Vector3.Distance(player.position, transform.position);
-        if(Playerdistance < 8)
+        if(Playerdistance < 12)
         {
             agent.SetDestination(target.transform.position);
             animator.SetInteger("conditions", 1);
             animator.SetBool("running", true);
             animator.SetBool("attacking", false);
         }
-        if(Playerdistance > 8)
+        if(Playerdistance > 12)
         {
             animator.SetInteger("conditions", 0);
 
