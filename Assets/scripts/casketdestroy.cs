@@ -13,6 +13,7 @@ public class casketdestroy : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
     }
+    /*
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Prince")
@@ -23,5 +24,15 @@ public class casketdestroy : MonoBehaviour
             keyins.ena();
         }
        
+    }
+    */
+     void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Player")
+        {
+            rend.material.color = reds;
+            Destroy(gameObject, 5f);
+            Debug.Log("destroy");
+        }
     }
 }

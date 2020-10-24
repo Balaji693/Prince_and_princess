@@ -23,6 +23,8 @@ public class Playermovement : MonoBehaviour
     public float gravity = 20.0f;
     protected float Stop = 1f;
     protected float Runspeed = 4;
+    public Enemycontroller enemy;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,7 +56,7 @@ public class Playermovement : MonoBehaviour
       characterController.Move(Movedir * Time.deltaTime);
     }
 
-    void Movement()
+   public void Movement()
     {
         Movedir = new Vector3(leftjoystick.Horizontal * 1f, 0, leftjoystick.Vertical * 1f);
      var vel = Quaternion.AngleAxis(cameraangleY + 180, Vector3.up) * Movedir * 5f;
@@ -62,9 +64,9 @@ public class Playermovement : MonoBehaviour
 
         if (leftjoystick.Vertical != 0f)
         {
-           
+            animator.SetBool("Isidle", false);
             animator.SetInteger("conditions", 1);
-           
+            animator.SetBool("Isrunning", true);
             transform.rotation = Quaternion.LookRotation(Movedir);
             
 
@@ -72,9 +74,9 @@ public class Playermovement : MonoBehaviour
 
         if (leftjoystick.Horizontal != 0f)
         {
-           
+            animator.SetBool("Isidle", false);
             animator.SetInteger("conditions", 1);
-           
+            animator.SetBool("Isrunning", true);
 
             transform.rotation = Quaternion.LookRotation(Movedir);
         
@@ -84,9 +86,9 @@ public class Playermovement : MonoBehaviour
        
         else
         {
-         
+            animator.SetBool("Isidle", true);
             animator.SetInteger("conditions", 0);
-     
+            animator.SetBool("Isrunning", false);
         }
 
         
@@ -100,12 +102,32 @@ public class Playermovement : MonoBehaviour
 
 
     }
-    
 
-   
+     void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Enemy")
+        {
+           //
 
-    
-    
+        }
+    }
+
+     void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "parasite (1)")
+        {
+            animator.SetInteger("conditions", 2);
+            animator.SetBool("Isdying", true);
+            animator.SetBool("Isidle", false);
+            animator.SetBool("Isrunning", false);
+           
+            Debug.Log("die");
+        }
+    }
+
+
+
+
 }
 
 

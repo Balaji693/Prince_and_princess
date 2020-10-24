@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 7
     m_ConditionEvent: conditions
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Isidle
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7418848982774119685}
   m_Solo: 0
@@ -32,7 +35,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -59,7 +62,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: Running
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -90,6 +93,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: conditions
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Isidle
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3502766532694104623}
   m_Solo: 0
@@ -111,7 +117,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: Dying
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -142,6 +148,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: conditions
     m_EventTreshold: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: Isrunning
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2713509619399520014}
   m_Solo: 0
@@ -170,7 +179,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: Isidle
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
+  - m_Name: Isrunning
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
+  - m_Name: Isdying
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -226,6 +253,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 7
     m_ConditionEvent: conditions
     m_EventTreshold: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: Isrunning
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7418848982774119685}
   m_Solo: 0
@@ -251,6 +281,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 7
     m_ConditionEvent: conditions
     m_EventTreshold: 2
+  - m_ConditionMode: 2
+    m_ConditionEvent: Isdying
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7418848982774119685}
   m_Solo: 0
@@ -305,6 +338,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: conditions
     m_EventTreshold: 2
+  - m_ConditionMode: 1
+    m_ConditionEvent: Isdying
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1863835497152672815}
   m_Solo: 0
