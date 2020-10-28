@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2847909670
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: statue
+      Dependencies: {}
+    Info_1:
+      Name: level01
+      Dependencies: {}

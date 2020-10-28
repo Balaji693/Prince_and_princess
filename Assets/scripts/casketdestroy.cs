@@ -7,7 +7,7 @@ public class casketdestroy : MonoBehaviour
     public Material mat;
     public Renderer rend;
     public Color reds = Color.red;
-
+    
 
     private void Start()
     {
@@ -32,7 +32,9 @@ public class casketdestroy : MonoBehaviour
         {
             rend.material.color = reds;
             Destroy(gameObject, 5f);
+            
             Debug.Log("destroy");
         }
     }
+   
 }

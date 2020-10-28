@@ -103,27 +103,8 @@ public class Playermovement : MonoBehaviour
 
     }
 
-     void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.tag == "Enemy")
-        {
-           //
-
-        }
-    }
-
-     void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.name == "parasite (1)")
-        {
-            animator.SetInteger("conditions", 2);
-            animator.SetBool("Isdying", true);
-            animator.SetBool("Isidle", false);
-            animator.SetBool("Isrunning", false);
-           
-            Debug.Log("die");
-        }
-    }
+     
+   
 
 
 

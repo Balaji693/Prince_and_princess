@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Enemeyinfo(evil).unity
     guid: ea301ad1d5df5224bb7d8ddac142a576
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Level02.unity
-    guid: 3212ebb7e875a3340a6d1b4a6393c12a
+    path: Assets/Scenes/testing.unity
+    guid: d14a3391ff15c514098b6ee59207019d
   m_configObjects: {}

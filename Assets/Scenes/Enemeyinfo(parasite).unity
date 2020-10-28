@@ -742,6 +742,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3100658833193211032, guid: 9612cd627ca4c4a449621ce01defca9f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3100658833193211033, guid: 9612cd627ca4c4a449621ce01defca9f, type: 3}
       propertyPath: m_Center.z
       value: 1.2547441e-10
