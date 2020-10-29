@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class LoadAssetBundles : MonoBehaviour
 {
-    AssetBundle myloadassetbundle;
+    AssetBundle myLoadAssetBundle;
     public string path;
-    public string assetname;
+    public string prefabname;
     // Start is called before the first frame update
     void Start()
     {
-        LoadAssestBundle(path);
-        InstantiateObjectFromBundle(assetname);
-    }
-
-    void LoadAssestBundle(string bundleUrl)
-    {
-        myloadassetbundle = AssetBundle.LoadFromFile(bundleUrl);
+        LoadAssetBundle(path);
+        InstantiateObjectFromBundle(prefabname);
 
     }
-    void InstantiateObjectFromBundle(string assetname)
+
+    void LoadAssetBundle(string bundleUrl)
     {
-        var prefab = myloadassetbundle.LoadAsset(assetname);
-        Instantiate(prefab,transform.position,transform.rotation);
+        myLoadAssetBundle = AssetBundle.LoadFromFile(bundleUrl);
+    }
+    void InstantiateObjectFromBundle(string assetName)
+    {
+        var prefab = myLoadAssetBundle.LoadAsset(assetName);
+        Instantiate(prefab, transform.position, transform.rotation);
     }
 }

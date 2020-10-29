@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3744785871
+CRC: 2542540260
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c018b11321f85c442cdb0ca634552e30
+    Hash: 31c8a54c4ca46ed84427ef435ed69b5e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 13b86746f5685b9ab66107b4035d2af6
+    Hash: b83e6627b2536e83efe90c4325dd9b7f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,8 +25,14 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5ab6369d060338b438da38dcacd693aa, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 Assets:
-- Assets/prefabs/Small Elephant Statue.prefab
+- Assets/prefabs/casketkey.prefab
 Dependencies: []

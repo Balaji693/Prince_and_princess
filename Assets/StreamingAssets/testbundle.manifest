@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3744785871
+CRC: 511330154
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c018b11321f85c442cdb0ca634552e30
+    Hash: 51d59314e0a873607679f71fb51690e2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 13b86746f5685b9ab66107b4035d2af6
+    Hash: 065f721808447a223b9561dd0d7a2c87
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -15,18 +15,14 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
-- Class: 23
-  Script: {instanceID: 0}
 - Class: 28
-  Script: {instanceID: 0}
-- Class: 33
-  Script: {instanceID: 0}
-- Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 65
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
-- Assets/prefabs/Small Elephant Statue.prefab
+- Assets/BundledAssets/testbundle/BundledSpriteObject.prefab
 Dependencies: []

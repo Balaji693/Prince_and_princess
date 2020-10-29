@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3020515032
+CRC: 1038064071
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -10,4 +10,13 @@ AssetBundleManifest:
       Dependencies: {}
     Info_2:
       Name: level02
+      Dependencies: {}
+    Info_3:
+      Name: testbundle
+      Dependencies: {}
+    Info_4:
+      Name: ground
+      Dependencies: {}
+    Info_5:
+      Name: casket
       Dependencies: {}
