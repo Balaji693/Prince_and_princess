@@ -14,7 +14,7 @@ public class cagedoordestroy : MonoBehaviour
      void Start()
     {
         count = 0;
-       
+        door = FindObjectOfType<cagedoorscript>();
         // cagedoorscript door = gameObject.GetComponent("cagedoorscript") as cagedoorscript;
       
 

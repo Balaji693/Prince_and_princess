@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2684667395
+CRC: 3327315706
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3e6266fa1bf03c30700e925108a262f4
+    Hash: 5708828dbcffb8b9e0805bdd8d0ceaf9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 13b86746f5685b9ab66107b4035d2af6
@@ -28,5 +28,6 @@ ClassTypes:
 - Class: 65
   Script: {instanceID: 0}
 Assets:
-- Assets/prefabs/levle02.prefab
-Dependencies: []
+- Assets/prefabs/Level02.prefab
+Dependencies:
+- D:/workspace/Prince and Princess/Assets/StreamingAssets/cageprefabs

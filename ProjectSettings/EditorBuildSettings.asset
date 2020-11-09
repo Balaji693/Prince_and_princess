@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Level01.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Enemeyinfo(vampire).unity
     guid: cd46b6d685a1a0f4b8facd9a5cd321ef
@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/testing.unity
+  - enabled: 0
+    path: Assets/Scenes/Level01.unity
     guid: d14a3391ff15c514098b6ee59207019d
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: bf9ce0d19f0135d4591a7eb45bd09f56
   m_configObjects: {}

@@ -17,7 +17,9 @@ public class Enemycontroller : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        target = GameObject.Find("Prince");
         
+
 
     }
     void FixedUpdate()

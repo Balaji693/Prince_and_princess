@@ -4,26 +4,24 @@ using UnityEngine;
 public class cagedoorscript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public cagedoordestroy dest;
-   
+  //  public cagedoordestroy dest;
 
+    public Animator anim;
     // Update is called once per frame
-    
-  public void doors()
+     void Start()
     {
-        Destroy(gameObject);
+        anim = GetComponent<Animator>();
+      //  anim.SetInteger("conditions", 0);
+    }
+    public void doors()
+    {
+        anim.SetInteger("conditions", 1);
+        anim.SetBool("open", true);
     }
 
     void Update()
     {
-        if(dest.doordestroy == true)
-        {
-            
-            Debug.Log("count 1");
-        }
-        if(dest.count == 1)
-        {
-            Destroy(gameObject);
-        }
+     
+       
     }
 }

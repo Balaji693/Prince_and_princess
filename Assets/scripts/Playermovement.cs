@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿
 
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Playermovement : MonoBehaviour
@@ -24,7 +25,8 @@ public class Playermovement : MonoBehaviour
     protected float Stop = 1f;
     protected float Runspeed = 4;
     public Enemycontroller enemy;
-
+    public Transform t_mesh;
+    public float rotationmultiplier = 10;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -34,12 +36,12 @@ public class Playermovement : MonoBehaviour
         leftjoystick = FindObjectOfType<FixedJoystick>();
         
     }
-    void Update()
+    void FixedUpdate()
     {
         Movement();
 
 
-        
+
 
 
 
@@ -48,8 +50,9 @@ public class Playermovement : MonoBehaviour
         //   rb.velocity = new Vector3(vel.x, rb.velocity.y, vel.z);
 
         //  cameraangleY += rightjoystick.Horizontal * cameraanglespeed ;
-        transform.rotation = Quaternion.LookRotation(Movedir);
-            transform.rotation = Quaternion.AngleAxis(cameraangleY + Vector3.SignedAngle(Vector3.forward, Movedir.normalized + Vector3.forward * 0.001f ,Vector3.up), Vector3.up);
+         transform.rotation = Quaternion.LookRotation(Movedir);
+      //  t_mesh.rotation = Quaternion.Lerp(t_mesh.rotation, Quaternion.LookRotation(Movedir), Time.deltaTime * rotationmultiplier);
+        transform.rotation = Quaternion.AngleAxis(cameraangleY + Vector3.SignedAngle(Vector3.forward, Movedir.normalized + Vector3.forward * 0.001f ,Vector3.up), Vector3.up);
 
 
         Movedir.y -= gravity * Time.deltaTime;
@@ -67,8 +70,8 @@ public class Playermovement : MonoBehaviour
             animator.SetBool("Isidle", false);
             animator.SetInteger("conditions", 1);
             animator.SetBool("Isrunning", true);
-            transform.rotation = Quaternion.LookRotation(Movedir);
-            
+              transform.rotation = Quaternion.LookRotation(Movedir);
+         //  t_mesh.rotation = Quaternion.Lerp(t_mesh.rotation, Quaternion.LookRotation(Movedir), Time.deltaTime * rotationmultiplier);
 
         }
 
@@ -79,6 +82,7 @@ public class Playermovement : MonoBehaviour
             animator.SetBool("Isrunning", true);
 
             transform.rotation = Quaternion.LookRotation(Movedir);
+         //   t_mesh.rotation = Quaternion.Lerp(t_mesh.rotation, Quaternion.LookRotation(Movedir), Time.deltaTime * rotationmultiplier);
         
 
 
