@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 185332580
+CRC: 793382822
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0b4ba3592f3dc9ab56d43c471df951be
+    Hash: 0792d813e2057e844594e6cc970f6cdf
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0a119a000e499449fe342a9e3e08f0b5
+    Hash: db63bd14ee19fb1881b1282a2f4cb0da
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,6 +29,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
@@ -37,7 +39,10 @@ ClassTypes:
   Script: {fileID: 11500000, guid: ef0d48cca8cea0b42a60af33c576a58c, type: 3}
 - Class: 115
   Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
 Assets:
 - Assets/prefabs/Cagedoor.prefab
+- Assets/prefabs/Door.prefab
 - Assets/prefabs/Cage.prefab
 Dependencies: []
