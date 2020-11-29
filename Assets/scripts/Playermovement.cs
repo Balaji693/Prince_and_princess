@@ -27,6 +27,7 @@ public class Playermovement : MonoBehaviour
     public Enemycontroller enemy;
     public Transform t_mesh;
     public float rotationmultiplier = 10;
+    public Playermovement movement;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,7 +37,7 @@ public class Playermovement : MonoBehaviour
         leftjoystick = FindObjectOfType<FixedJoystick>();
         
     }
-    void FixedUpdate()
+  public  void Update()
     {
         Movement();
 
@@ -59,7 +60,7 @@ public class Playermovement : MonoBehaviour
       characterController.Move(Movedir * Time.deltaTime);
     }
 
-   public void Movement()
+  public  void Movement()
     {
         Movedir = new Vector3(leftjoystick.Horizontal * 1f, 0, leftjoystick.Vertical * 1f);
      var vel = Quaternion.AngleAxis(cameraangleY + 180, Vector3.up) * Movedir * 5f;
@@ -106,9 +107,7 @@ public class Playermovement : MonoBehaviour
 
 
     }
-
-     
-   
+  
 
 
 

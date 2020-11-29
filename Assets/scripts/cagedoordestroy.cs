@@ -10,11 +10,13 @@ public class cagedoordestroy : MonoBehaviour
     public cagedoorscript door;
     public int count = 0;
     public GameObject script;
-   
+    public dooropen open;
+    
      void Start()
     {
         count = 0;
         door = FindObjectOfType<cagedoorscript>();
+        open = FindObjectOfType<dooropen>();
         // cagedoorscript door = gameObject.GetComponent("cagedoorscript") as cagedoorscript;
       
 
@@ -26,11 +28,14 @@ public class cagedoordestroy : MonoBehaviour
         {
             count = count + 1;
             doordestroy = true;
+            open.opendoor();
             Destroy(gameObject);
             door.doors();
-           
+            open.opendoor();
+            
 
         }
+      
         
     }
 }

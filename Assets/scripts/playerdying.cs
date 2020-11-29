@@ -4,26 +4,35 @@ using UnityEngine;
 public class playerdying : MonoBehaviour
 {
     public Rigidbody rb;
-    protected Animator animator;
+    public Animator animator;
     public Playermovement movements;
+    
     // Start is called before the first frame update
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-       
+      movements = FindObjectOfType<Playermovement>();
         animator = GetComponent<Animator>();
+       
     }
 
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider others)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (others.gameObject.tag == "Enemy")
         {
-            animator.SetInteger("conditions", 2);
             animator.SetBool("Isdying", true);
+            animator.SetInteger("conditions", 2);
             animator.SetBool("Isidle", false);
             animator.SetBool("Isrunning", false);
             movements.enabled = false;
-            Debug.Log("die");
+
+
+
+
+
         }
+       
     }
+
 }

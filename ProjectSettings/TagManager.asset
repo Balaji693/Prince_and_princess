@@ -6,6 +6,9 @@ TagManager:
   tags:
   - script
   - Enemy
+  - Fire
+  - Prince
+  - Princess
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 

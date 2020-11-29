@@ -18,10 +18,4 @@ public class cagedoorscript : MonoBehaviour
         anim.SetInteger("conditions", 1);
         anim.SetBool("open", true);
     }
-
-    void Update()
-    {
-     
-       
-    }
 }

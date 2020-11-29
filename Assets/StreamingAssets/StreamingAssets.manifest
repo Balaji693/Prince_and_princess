@@ -1,26 +1,19 @@
 ManifestFileVersion: 0
-CRC: 24094693
+CRC: 1645740506
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: statue
-      Dependencies: {}
-    Info_1:
-      Name: level01
-      Dependencies: {}
-    Info_2:
-      Name: level02
-      Dependencies:
-        Dependency_0: cageprefabs
-    Info_3:
       Name: testbundle
       Dependencies: {}
-    Info_4:
+    Info_1:
       Name: casket
       Dependencies: {}
-    Info_5:
+    Info_2:
       Name: cageprefabs
       Dependencies: {}
-    Info_6:
+    Info_3:
       Name: enemy
+      Dependencies: {}
+    Info_4:
+      Name: levels
       Dependencies: {}
