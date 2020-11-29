@@ -6,6 +6,8 @@ public class playerdying : MonoBehaviour
     public Rigidbody rb;
     public Animator animator;
     public Playermovement movements;
+    public AudioSource clip;
+    float count;
     
     // Start is called before the first frame update
     
@@ -14,6 +16,7 @@ public class playerdying : MonoBehaviour
         rb = GetComponent<Rigidbody>();
       movements = FindObjectOfType<Playermovement>();
         animator = GetComponent<Animator>();
+       
        
     }
 
@@ -26,13 +29,21 @@ public class playerdying : MonoBehaviour
             animator.SetBool("Isidle", false);
             animator.SetBool("Isrunning", false);
             movements.enabled = false;
-
+            count = count + 1;
 
 
 
 
         }
+        
        
+    }
+    public void Update()
+    {
+        if(count == 1)
+        {
+            clip.Play();
+        }
     }
 
 }
